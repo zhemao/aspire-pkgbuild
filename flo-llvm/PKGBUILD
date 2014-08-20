@@ -6,6 +6,7 @@ pkgdesc="Converts Flo files to LLVM files"
 arch=('i686' 'x86_64')
 url="https://github.com/palmer-dabbelt/flo-llvm"
 license=('GPL2')
+groups=('dreamer-tools')
 depends=('libflo' 'llvm' 'clang')
 makedepends=('pconfigure')
 source=("https://github.com/palmer-dabbelt/${pkgname}/archive/v${pkgver}.tar.gz")

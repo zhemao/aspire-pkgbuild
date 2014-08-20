@@ -6,6 +6,7 @@ pkgdesc="Benchmarks for Chisel"
 arch=('any')
 url="https://github.com/palmer-dabbelt/chisel-benchmarks"
 license=('GPL2')
+groups=('dreamer-tools')
 makedepends=('pconfigure')
 depends=('sbt')
 source=("https://github.com/palmer-dabbelt/${pkgname}/archive/v${pkgver}.tar.gz")

@@ -6,6 +6,7 @@ pkgdesc="Flo multi-word expander"
 arch=('i686' 'x86_64')
 url="https://github.com/palmer-dabbelt/flo-mwe"
 license=('GPL2')
+groups=('dreamer-tools')
 makedepends=('pconfigure')
 depends=('libflo')
 source=("https://github.com/palmer-dabbelt/${pkgname}/archive/v${pkgver}.tar.gz")
