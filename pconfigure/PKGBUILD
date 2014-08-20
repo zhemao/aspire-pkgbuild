@@ -14,14 +14,21 @@ license=('AGPL')
 source=("https://github.com/palmer-dabbelt/$pkgname/archive/v${pkgver}.tar.gz")
 md5sums=('631295199f1e9617577720bc0f362f43')
 
+prepare() {
+    cd "$srcdir/$pkgname-$pkgver"
+
+    echo "PREFIX = /usr" > Configfile.local
+    echo "LANGUAGES += c" >> Configfile.local
+    echo "COMPILEOPTS += -DNDEBUG" >> Configfile.local
+}
+
 build() {
 	cd "$srcdir/$pkgname-$pkgver"
-        rm -f Configfiles/local
-        ./bootstrap.sh --prefix "$pkgdir/usr"
-	make
+        pconfigure || die "pconfigure failed"
+        make D="$pkgdir"
 }
 
 package() {
 	cd "$srcdir/$pkgname-$pkgver"
-	make install
+	make D="$pkgdir" install
 }
