@@ -1,11 +1,12 @@
 # Maintainer: Howard Mao <zhemao@eecs.berkeley.edu>
 pkgname=libocn
 pkgver=0.0.4
-pkgrel=1
+pkgrel=2
 pkgdesc="An on-chip network library"
 arch=('i686' 'x86_64')
 url="https://github.com/palmer-dabbelt/libocn"
 license=('GPL2')
+groups=('dreamer-tools')
 makedepends=('pconfigure')
 depends=('graphviz')
 source=("https://github.com/palmer-dabbelt/${pkgname}/archive/v${pkgver}.tar.gz")
