@@ -13,8 +13,6 @@ md5sums=('616a8cc2fd7b8d2483d79848c2f1c7d6')
 prepare() {
     cd "$srcdir/$pkgname-$pkgver"
     echo "PREFIX = /usr" > Configfile.local
-    echo "LANGUAGES += c" >> Configfile.local
-    echo "COMPILEOPTS += -DNDEBUG" >> Configfile.local
 }
 
 build() {
